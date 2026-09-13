@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edson Silva | Portfólio</title>
+    
+    <!-- Link do Font Awesome para os ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Link do seu arquivo CSS (Este é o que devolve a cor e o layout!) -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR / MENU DE NAVEGAÇÃO -->
+    <header>
+        <nav>
+            <a href="#" class="logo">Edson <span>Silva</span></a>
+            <ul>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#experiencia">Experiência</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- SEÇÃO HOME / APRESENTAÇÃO -->
+        <section id="home">
+            <div class="home-content">
+                <p class="saudacao">Olá, meu nome é Edson</p>
+                <h1>Desenvolvedor <br><span class="destaque-blue">Web</span><span class="cursor">|</span></h1>
+                <p class="descricao">Sou desenvolvedor web apaixonado por criar soluções modernas, funcionais e com ótimo design.</p>
+                
+                <div class="home-buttons">
+                    <a href="#projetos" class="btn btn-primary">💼 Ver Projetos</a>
+                    <a href="#sobre" class="btn btn-outline">👤 Sobre mim</a>
+                </div>
+
+                <div class="redes-sociais">
+                    <a href="LINK_DO_SEU_GITHUB" target="_blank" class="icon-link">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.instagram.com/edson.flh?stkn=YnhocXdoY2M0cG9u&utm_source=qr" target="_blank" class="icon-link">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="home-img">
+                <img src="assets/images/perfil.jpg" alt="Foto de perfil de Edson">
+            </div>
+        </section>
+
+        <!-- SEÇÃO SOBRE MIM -->
+        <section id="sobre">
+            <h2 class="titulo-secao">Sobre mim</h2>
+            
+            <div class="sobre-container">
+                <div class="card-quem-sou">
+                    <div class="icon-avatar">👤</div>
+                    <h3>Quem sou eu?</h3>
+                    <p>Sou um desenvolvedor web em formação, com foco em HTML, CSS e JavaScript. Gosto de transformar ideias em projetos reais.</p>
+                </div>
+
+                <div class="grid-diferenciais">
+                    <div class="card-diferencial">
+                        <span class="icon-card">&lt;/&gt;</span>
+                        <h4>Desenvolvimento Web</h4>
+                    </div>
+                    <div class="card-diferencial">
+                        <span class="icon-card">🎨</span>
+                        <h4>Design Responsivo</h4>
+                    </div>
+                    <div class="card-diferencial">
+                        <span class="icon-card">🚀</span>
+                        <h4>Performance</h4>
+                    </div>
+                    <div class="card-diferencial">
+                        <span class="icon-card">🎓</span>
+                        <h4>Sempre Aprendendo</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO HABILIDADES -->
+        <section id="habilidades">
+            <h2 class="titulo-secao">Minhas Habilidades</h2>
+
+            <div class="grid-cards">
+                <article class="card-item">
+                    <h3>HTML5</h3>
+                    <p>Estruturação semântica e acessível de páginas web.</p>
+                </article>
+
+                <article class="card-item">
+                    <h3>CSS3</h3>
+                    <p>Estilização, layouts responsivos, Flexbox e Grid.</p>
+                </article>
+
+                <article class="card-item">
+                    <h3>JavaScript</h3>
+                    <p>Lógica de programação e manipulação do DOM.</p>
+                </article>
+
+                <article class="card-item">
+                    <h3>Git & GitHub</h3>
+                    <p>Controle de versão e hospedagem de código fonte.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- SEÇÃO PROJETOS -->
+        <section id="projetos">
+            <h2 class="titulo-secao">Meus Projetos</h2>
+
+            <!-- COLE O SEU NOVO PROJETO AQUI -->
+               <article class="card-item card-projeto">
+                    <img src="assets/images/mobile.png" alt="Logotipo do aplicativo MylitED">
+                    
+                    <h3>App Mobile com Expo</h3>
+                    <p>Aplicativo mobile desenvolvido utilizando o framework Expo e controle de versão com Git. Focado em performance e usabilidade.</p>
+                    
+                    <div class="projeto-links">
+                        <a href="https://github.com/Edson-Jose/MylitED" target="_blank" class="btn btn-outline">
+                            <i class="fa-brands fa-github"></i> Ver Código
+                        </a>
+                    </div>
+                </article>
+
+                <!-- <article class="card-item card-projeto">
+                    <img src="assets/images/projeto2.jpg" alt="Prévia do Projeto 2">
+                    <h3>Projeto 2 — Nome do Projeto</h3>
+                    <p>Descrição simples do que o projeto faz e qual problema ele resolve.</p>
+                    <p class="techs"><strong>Tecnologias:</strong> HTML5, CSS3, JavaScript</p>
+                    <div class="projeto-links">
+                        <a href="#" target="_blank" class="btn btn-outline">Ver Código</a>
+                        <a href="#" target="_blank" class="btn btn-primary">Ver Projeto</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- SEÇÃO EXPERIÊNCIA E FORMAÇÃO -->
+        <section id="experiencia">
+            <h2 class="titulo-secao">Formação & Experiência</h2>
+
+            <div class="grid-experiencias">
+                <div class="card-item">
+                    <h3>🎓 Formação Acadêmica</h3>
+                    <ul class="lista-experiencia">
+                        <li>
+                            <h4>Análise e Desenvolvimento de Sistemas</h4>
+                            <p class="subtitulo">Centro Universitário Cesmac — <em>Em andamento (Início: 2025)</em></p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="card-item">
+                    <h3>💼 Experiência Profissional</h3>
+                    <ul class="lista-experiencia">
+                        <li>
+                            <h4>Auxiliar de TI</h4>
+                            <p class="subtitulo">Empresa — <em>Período de atuação</em></p>
+                            <p>Suporte técnico, manutenção de sistemas e auxílio na infraestrutura de TI.</p>
+                        </li>
+                        <li>
+                            <h4>Jovem Aprendiz</h4>
+                            <p class="subtitulo">Usina Santa Maria — <em>Concluído em 11/2025</em></p>
+                            <p>Apoio às rotinas administrativas e operacionais.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+       <!-- SEÇÃO CONTATO -->
+<section id="contato">
+    <h2 class="titulo-secao">Entre em Contato</h2>
+    <p class="subtitulo-contato">Sinta-se à vontade para me mandar uma mensagem ou me encontrar nas redes!</p>
+
+    <div class="contato-container">
+        <div class="card-item">
+            <h3>Informações de Contato</h3>
+            <p><strong>E-mail:</strong> <a href="mailto:edsonjosepp@gmail.com">edsonjosepp@gmail.com</a></p>
+            <p><strong>GitHub:</strong> <a href="https://github.com/Edson-Jose" target="_blank">Meu GitHub</a></p>
+        </div>
+
+        <!-- Formulário Otimizado do FormSubmit -->
+        <form class="form-contato" action="https://formsubmit.co/edsonjosepp@gmail.com" method="POST">
+            <!-- 1. Desativa a tela de "Não sou um robô" (Captcha) -->
+            <input type="hidden" name="_captcha" value="false">
+            
+            <!-- 2. Redireciona direto para a sua tela de sucesso no Live Server -->
+            <input type="hidden" name="_next" value="http://127.0.0.1:5000/obrigado.html">
+            
+            <!-- 3. Define o assunto do e-mail que vai chegar para você -->
+            <input type="hidden" name="_subject" value="Nova mensagem do seu Portfólio!">
+            
+            <!-- 4. Formata o e-mail para chegar com um visual mais bonito (tabela) -->
+            <input type="hidden" name="_template" value="table">
+            
+            <div class="campo">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="name" placeholder="Seu nome completo" required>
+            </div>
+
+            <div class="campo">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="Seu e-mail de contato" required>
+            </div>
+
+            <div class="campo">
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="message" rows="4" placeholder="Escreva sua mensagem aqui..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+        </form>
+    </div>
+</section>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <p>&copy; 2026 Edson Silva. Todos os direitos reservados.</p>
+        <p>Desenvolvido com HTML5 e CSS3 durante o Projeto Integrador.</p>
+    </footer>
+
+</body>
+</html>

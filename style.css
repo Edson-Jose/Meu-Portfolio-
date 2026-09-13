@@ -1,0 +1,477 @@
+/* ==========================================================================
+   1. CONFIGURAÇÕES GERAIS E VARIÁVEIS (TEMA ESCURO)
+   ========================================================================== */
+:root {
+    --bg-dark: #080d1a;
+    --bg-card: #0d162d;
+    --bg-card-hover: #132042;
+    --primary: #3b82f6;
+    --primary-hover: #2563eb;
+    --text-white: #ffffff;
+    --text-gray: #94a3b8;
+    --border-color: #1e293b;
+    --font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    font-family: var(--font-family);
+    line-height: 1.6;
+}
+
+main {
+    max-width: 1440px; /* Aumentado de 1200px para expandir nas laterais */
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* ==========================================================================
+   2. NAVBAR
+   ========================================================================== */
+header {
+    background-color: rgba(8, 13, 26, 0.9);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--border-color);
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.2rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--text-white);
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--primary);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav ul a {
+    color: var(--text-gray);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul a:hover, nav ul a.active {
+    color: var(--primary);
+    border-bottom: 2px solid var(--primary);
+    padding-bottom: 4px;
+}
+
+
+/* ==========================================================================
+   3. SEÇÃO HOME
+   ========================================================================== */
+#home {
+    min-height: auto; /* Remove a obrigação de ocupar a tela inteira à força */
+    padding: 4rem 5% 2rem 5%; /* Reduz o espaço de cima (era 100vh, agora usa 4rem) */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    text-align: left;
+}
+.saudacao {
+    color: var(--primary);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+h1 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+}
+
+.destaque-blue {
+    color: var(--primary);
+}
+
+.cursor {
+    color: var(--primary);
+    animation: piscar 1s infinite;
+}
+
+@keyframes piscar {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.descricao {
+    color: var(--text-gray);
+    font-size: 1.1rem;
+    max-width: 500px;
+    margin-bottom: 2rem;
+}
+
+/* BOTÕES DA HOME */
+.home-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    padding: 0.8rem 1.6rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--text-white);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+}
+
+.btn-outline {
+    border: 1px solid var(--border-color);
+    color: var(--text-white);
+    background-color: transparent;
+}
+
+.btn-outline:hover {
+    border-color: var(--primary);
+    background-color: rgba(59, 130, 246, 0.1);
+}
+
+/* REDES SOCIAIS */
+.social-links {
+    display: flex;
+    gap: 1.2rem;
+}
+
+.icon-link {
+    margin-right: 1rem; /* Adiciona um espaço à direita de cada ícone */
+    text-decoration: none; /* Garante que não apareça nenhum sublinhado */
+    display: inline-block; /* Permite que a margem funcione corretamente */
+}
+
+.icon-link i {
+    font-size: 1.8rem; /* Tamanho do ícone */
+    color: var(--text-gray); /* Cor base */
+    transition: color 0.3s, transform 0.3s;
+}
+
+.icon-link i:hover {
+    color: var(--primary); /* Cor ao passar o mouse */
+    transform: translateY(-3px);
+}
+
+/* FOTO DE PERFIL COM BORDA ILUMINADA */
+.home-img img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--primary);
+    box-shadow: 0 0 25px rgba(59, 130, 246, 0.4);
+}
+
+/* ==========================================================================
+   4. TÍTULOS E ESTRUTURA GERAL DE SEÇÕES
+   ========================================================================== */
+section {
+    padding: 4rem 0;
+}
+
+.titulo-secao {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.titulo-secao::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: var(--primary);
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+}
+
+/* ==========================================================================
+   5. SEÇÃO SOBRE MIM
+   ========================================================================== */
+.sobre-container {
+    display: flex; /* Usamos Flexbox aqui para garantir que fique lado a lado com segurança */
+    gap: 2rem;
+    align-items: stretch;
+    width: 100%;
+}
+
+.card-quem-sou {
+    background-color: var(--bg-card);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    flex: 1; /* Ocupa 1 parte do espaço */
+    min-width: 280px;
+}
+
+.icon-avatar {
+    font-size: 1.8rem;
+    background-color: rgba(59, 130, 246, 0.1);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.card-quem-sou h3 {
+    margin-bottom: 0.8rem;
+}
+
+.card-quem-sou p {
+    color: var(--text-gray);
+    font-size: 0.95rem;
+}
+
+/* OS 4 CARDS LADO A LADO EM COLUNAS */
+.grid-diferenciais {
+    display: flex; /* Força os 4 cards a ficarem estritamente em linha horizontal */
+    gap: 1rem;
+    flex: 2; /* Ocupa 2 partes do espaço, ficando maior que o 'Quem sou eu' */
+}
+
+.card-diferencial {
+    background-color: var(--bg-card);
+    padding: 1.5rem 0.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1; /* Cada um dos 4 cards divide o espaço igualmente */
+    min-width: 0; /* Impede que o conteúdo estoure o card */
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.card-diferencial:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+    background-color: var(--bg-card-hover);
+}
+
+.icon-card {
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.card-diferencial h4 {
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   6. CARDS GERAIS (HABILIDADES, PROJETOS E EXPERIÊNCIA)
+   ========================================================================== */
+.grid-cards, .grid-experiencias {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.card-item {
+    background-color: var(--bg-card);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s;
+}
+
+.card-item:hover {
+    transform: translateY(-5px);
+}
+
+.card-item h3 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.card-item p {
+    color: var(--text-gray);
+}
+
+/* PROJETOS */
+.card-projeto img {
+    max-width: 120px;
+    height: auto;
+    display: block;
+    margin: 0 0 1.5rem 10px;
+    border-radius: 24px;
+}
+
+.card-projeto .techs {
+    margin: 1rem 0;
+    font-size: 0.9rem;
+}
+
+.projeto-links {
+    display: flex;
+    gap: 0.8rem;
+    margin-top: 1rem;
+}
+
+/* LISTA DE EXPERIÊNCIAS */
+.lista-experiencia {
+    list-style: none;
+}
+
+.lista-experiencia li {
+    margin-bottom: 1.5rem;
+}
+
+.lista-experiencia h4 {
+    color: var(--text-white);
+}
+
+.lista-experiencia .subtitulo {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+/* ==========================================================================
+   7. FORMULÁRIO E CONTATO
+   ========================================================================== */
+.subtitulo-contato {
+    text-align: center;
+    color: var(--text-gray);
+    margin-top: -2rem;
+    margin-bottom: 3rem;
+}
+
+.contato-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+}
+
+.contato-container a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.form-contato .campo {
+    margin-bottom: 1.2rem;
+}
+
+.form-contato label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: 500;
+}
+
+.form-contato input, .form-contato textarea {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    color: var(--text-white);
+    font-family: inherit;
+}
+
+.form-contato input:focus, .form-contato textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+/* ==========================================================================
+   8. RODAPÉ
+   ========================================================================== */
+footer {
+    text-align: center;
+    padding: 2.5rem;
+    background-color: var(--bg-card);
+    border-top: 1px solid var(--border-color);
+    color: var(--text-gray);
+    margin-top: 4rem;
+}
+
+/* ==========================================================================
+   9. RESPONSIVIDADE
+   ========================================================================== */
+@media (max-width: 992px) {
+    .sobre-container, .contato-container {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-diferenciais {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+nav {
+    max-width: 100%; /* Remove o limite e faz ocupar toda a tela */
+    padding: 1.2rem 5%; /* Empurra a logo e o menu para as pontas */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    @media (max-width: 768px) {
+    #home {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-top: 2rem;
+    }
+
+    .home-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+    .grid-diferenciais {
+        grid-template-columns: 1fr;
+    }
